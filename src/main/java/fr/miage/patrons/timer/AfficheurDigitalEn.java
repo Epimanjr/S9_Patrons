@@ -18,7 +18,7 @@ public class AfficheurDigitalEn extends Observeur {
     
     public void update() {
         // Récupération de l'état de la montre
-        SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/YYYY hh:mm:ss a");
+        SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/YYYY KK:mm:ss a");
         String state = sdf.format(this.montre.getDate());
         
         // Affichage
