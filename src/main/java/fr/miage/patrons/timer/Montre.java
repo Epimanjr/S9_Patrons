@@ -1,5 +1,6 @@
 package fr.miage.patrons.timer;
 
+import fr.miage.patrons.abstrait.Sujet;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
@@ -8,7 +9,7 @@ import java.util.GregorianCalendar;
  * @author Maxime BLAISE
  * @author Antoine NOSAL
  */
-public class Montre {
+public class Montre extends Sujet {
 
     private Date date;
 
