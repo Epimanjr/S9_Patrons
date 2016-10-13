@@ -5,7 +5,7 @@ package fr.miage.patrons.timer;
  * @author Maxime BLAISE
  * @author Antoine NOSAL
  */
-public class Observeur {
+public abstract class Observeur {
     
     // no attribut
     

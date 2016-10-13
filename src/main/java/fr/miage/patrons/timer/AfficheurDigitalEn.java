@@ -13,4 +13,8 @@ public class AfficheurDigitalEn extends Observeur {
         this.montre = montre;
     }
     
+    public void update() {
+        
+    }
+    
 }
