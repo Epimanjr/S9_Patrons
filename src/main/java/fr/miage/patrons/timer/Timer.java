@@ -1,5 +1,6 @@
 package fr.miage.patrons.timer;
 
+import java.util.GregorianCalendar;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -23,7 +24,8 @@ public class Timer implements Runnable {
     public void run() {
         // TODO
         while (true) {
-            this.montre.Notifie();
+            GregorianCalendar gc = new GregorianCalendar();
+            this.montre.setDate(gc.getTime());
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException ex) {

@@ -36,6 +36,7 @@ public class Montre extends Sujet {
 
     public void setDate(Date date) {
         this.date = date;
+        this.Notifie();
     }
 
 }
