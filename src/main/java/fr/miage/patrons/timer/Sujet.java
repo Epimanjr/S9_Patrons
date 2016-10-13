@@ -1,5 +1,7 @@
 package fr.miage.patrons.timer;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Maxime BLAISE
@@ -7,10 +9,10 @@ package fr.miage.patrons.timer;
  */
 public class Sujet {
     
-    // no attribut
+    private ArrayList<Observeur> observeurs;
     
     public void Attach(Observeur o) {
-        
+        this.observeurs.add(o);
     }
     
     public void Detach(Observeur o) {
@@ -18,10 +20,12 @@ public class Sujet {
     }
     
     public void DetachAll() {
-        
+        this.observeurs.removeAll(this.observeurs);
     }
     
     public void Notifie() {
-        
+        for(Observeur observeur : this.observeurs) {
+            observeur.update();
+        }
     }
 }

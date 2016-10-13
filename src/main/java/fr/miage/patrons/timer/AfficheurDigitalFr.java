@@ -5,7 +5,7 @@ package fr.miage.patrons.timer;
  * @author Maxime BLAISE
  * @author Antoine NOSAL
  */
-public class AfficheurDigitalFr {
+public class AfficheurDigitalFr extends Observeur {
 
     private Montre montre;
     
