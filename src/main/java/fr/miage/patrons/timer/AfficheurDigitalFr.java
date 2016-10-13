@@ -18,11 +18,11 @@ public class AfficheurDigitalFr extends Observeur {
     
     public void update() {
         // Récupération de l'état de la montre
-        SimpleDateFormat sdf = new SimpleDateFormat("DD/MM/YYYY hh:mm");
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/YYYY hh:mm:ss");
         String state = sdf.format(this.montre.getDate());
         
         // Affichage
-        System.out.println(state);
+        System.out.println("FR " + state);
     }
     
 }
