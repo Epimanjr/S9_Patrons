@@ -1,6 +1,7 @@
 package fr.miage.patrons.abstrait;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  *
@@ -34,8 +35,10 @@ public abstract class Sujet {
     }
     
     public void Notifie() {
-        for(Observeur observeur : this.observeurs) {
-            observeur.update();
+        Iterator<Observeur> it = this.observeurs.iterator();
+        while(it.hasNext()) {
+            Observeur obs = it.next();
+            obs.update();
         }
     }
 }
