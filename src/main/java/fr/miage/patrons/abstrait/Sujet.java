@@ -1,4 +1,4 @@
-package Abstrait;
+package fr.miage.patrons.abstrait;
 
 import java.util.ArrayList;
 

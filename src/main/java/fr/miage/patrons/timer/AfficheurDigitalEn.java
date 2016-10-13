@@ -1,6 +1,6 @@
 package fr.miage.patrons.timer;
 
-import Abstrait.Observeur;
+import fr.miage.patrons.abstrait.Observeur;
 
 /**
  *
