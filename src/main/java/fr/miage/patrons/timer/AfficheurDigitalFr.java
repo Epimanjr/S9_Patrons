@@ -1,5 +1,7 @@
 package fr.miage.patrons.timer;
 
+import Abstrait.Observeur;
+
 /**
  *
  * @author Maxime BLAISE

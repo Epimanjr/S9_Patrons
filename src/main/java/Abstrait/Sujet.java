@@ -1,4 +1,4 @@
-package fr.miage.patrons.timer;
+package Abstrait;
 
 import java.util.ArrayList;
 
@@ -7,7 +7,7 @@ import java.util.ArrayList;
  * @author Maxime BLAISE
  * @author Antoine NOSAL
  */
-public class Sujet {
+public abstract class Sujet {
     
     private ArrayList<Observeur> observeurs;
     

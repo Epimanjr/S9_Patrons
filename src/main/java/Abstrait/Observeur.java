@@ -1,4 +1,4 @@
-package fr.miage.patrons.timer;
+package Abstrait;
 
 /**
  *
