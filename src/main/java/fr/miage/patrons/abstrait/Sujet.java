@@ -10,6 +10,16 @@ import java.util.ArrayList;
 public abstract class Sujet {
     
     private ArrayList<Observeur> observeurs;
+
+    public Sujet() {
+        this.observeurs = new ArrayList<>();
+    }
+
+    
+    public Sujet(ArrayList<Observeur> observeurs) {
+        this.observeurs = observeurs;
+    }
+    
     
     public void Attach(Observeur o) {
         this.observeurs.add(o);
