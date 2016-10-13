@@ -8,7 +8,7 @@ import java.text.SimpleDateFormat;
  * @author Maxime BLAISE
  * @author Antoine NOSAL
  */
-public class AfficheurDigitalEn extends Observeur {
+public class AfficheurDigitalEn implements Observeur {
 
     private Montre montre;
     
