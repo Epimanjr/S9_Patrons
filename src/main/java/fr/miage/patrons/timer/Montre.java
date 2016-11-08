@@ -39,7 +39,9 @@ public class Montre extends Observable {
         this.date = date;
         //this.Notifie();
         this.setChanged();
-        this.notifyObservers();
+       
+        //this.notifyObservers();
+        this.notifyObservers(date);
     }
 
 }

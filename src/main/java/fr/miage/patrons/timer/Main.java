@@ -13,8 +13,8 @@ public class Main {
         
         Montre montre = new Montre();
 
-        AfficheurDigitalFr fr = new AfficheurDigitalFr(montre);
-        AfficheurDigitalEn en = new AfficheurDigitalEn(montre);
+        AfficheurDigitalFr fr = new AfficheurDigitalFr();
+        AfficheurDigitalEn en = new AfficheurDigitalEn();
 
         montre.addObserver(fr);
         montre.addObserver(en);
