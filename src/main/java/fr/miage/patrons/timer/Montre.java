@@ -3,13 +3,14 @@ package fr.miage.patrons.timer;
 import fr.miage.patrons.abstrait.Sujet;
 import java.util.Date;
 import java.util.GregorianCalendar;
+import java.util.Observable;
 
 /**
  *
  * @author Maxime BLAISE
  * @author Antoine NOSAL
  */
-public class Montre extends Sujet {
+public class Montre extends Observable {
 
     private Date date;
 
@@ -36,7 +37,9 @@ public class Montre extends Sujet {
 
     public void setDate(Date date) {
         this.date = date;
-        this.Notifie();
+        //this.Notifie();
+        this.setChanged();
+        this.notifyObservers();
     }
 
 }

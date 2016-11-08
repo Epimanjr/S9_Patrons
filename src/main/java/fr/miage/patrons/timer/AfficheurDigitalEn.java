@@ -1,14 +1,15 @@
 package fr.miage.patrons.timer;
 
-import fr.miage.patrons.abstrait.Observeur;
+import java.util.Observer;
 import java.text.SimpleDateFormat;
+import java.util.Observable;
 
 /**
  *
  * @author Maxime BLAISE
  * @author Antoine NOSAL
  */
-public class AfficheurDigitalEn implements Observeur {
+public class AfficheurDigitalEn implements Observer {
 
     private Montre montre;
     
@@ -23,6 +24,11 @@ public class AfficheurDigitalEn implements Observeur {
         
         // Affichage
         System.out.println("EN " + state);
+    }
+
+    @Override
+    public void update(Observable o, Object o1) {
+        this.update();
     }
     
 }

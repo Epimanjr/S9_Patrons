@@ -6,21 +6,24 @@ package fr.miage.patrons.timer;
  * @author Antoine NOSAL
  */
 public class Main {
-    
+
     public static void main(String[] args) {
+
+        System.out.println("Lancement du programme");
         
         Montre montre = new Montre();
-        
+
         AfficheurDigitalFr fr = new AfficheurDigitalFr(montre);
         AfficheurDigitalEn en = new AfficheurDigitalEn(montre);
-        
-        montre.Attach(fr);
-        montre.Attach(en);
-        
-        Timer timer = new Timer(montre);
-        
-        timer.run();
-        
+
+        montre.addObserver(fr);
+        montre.addObserver(en);
+
+        /* Timer timer = new Timer(montre);
+        timer.run();*/
+        Thread t = new Thread(new Timer(montre));
+        t.start();
+
     }
-    
+
 }
