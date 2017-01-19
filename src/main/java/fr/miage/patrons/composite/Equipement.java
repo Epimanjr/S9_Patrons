@@ -1,4 +1,3 @@
-
 package fr.miage.patrons.composite;
 
 import java.util.ArrayList;
@@ -9,27 +8,27 @@ import java.util.List;
  * @author Maxime BLAISE
  */
 public class Equipement {
-    
+
     /**
      * Pour gérer la récursivité.
      */
     private final List<Equipement> listEquipements = new ArrayList<>();
-    
+
     /**
      * Nom de l'équipement
      */
     private String name;
-    
+
     /**
      * Prix de l'équipement
      */
     private int prix;
-    
+
     /**
      * Consommation de l'équipement
      */
     private int consommation;
-    
+
     /**
      * VRAI si fonctionne, sinon FAUX.
      */
@@ -40,6 +39,21 @@ public class Equipement {
         this.prix = prix;
         this.consommation = consommation;
         this.fonctionne = fonctionne;
+    }
+
+    public int getPrixTotal() {
+        // Initialisation
+        int prixTotal = this.prix;
+
+        // Si la liste n'est pas vide
+        if (!this.listEquipements.isEmpty()) {
+            // On parcourt les équipements et on ajoute son prix
+            for (Equipement e : this.listEquipements) {
+                prixTotal += e.getPrixTotal();
+            }
+        }
+
+        return prixTotal;
     }
 
     public List<Equipement> getListEquipements() {
@@ -77,6 +91,5 @@ public class Equipement {
     public void setFonctionne(boolean fonctionne) {
         this.fonctionne = fonctionne;
     }
-    
-    
+
 }
