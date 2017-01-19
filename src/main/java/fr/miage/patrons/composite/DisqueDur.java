@@ -10,16 +10,12 @@ public class DisqueDur extends EquipementSimple {
      * Capacité du disque dur
      */
     private int capacite;
-    
-    public DisqueDur(String name, int prix, int consommation, boolean fonctionne) {
-        super(name, prix, consommation, fonctionne);
-    }
 
-    public DisqueDur(int capacite, String name, int prix, int consommation, boolean fonctionne) {
-        super(name, prix, consommation, fonctionne);
+    public DisqueDur(int capacite, String name, int cout, double coef, int consommation, boolean fonctionne) {
+        super(name, cout, coef, consommation, fonctionne);
         this.capacite = capacite;
     }
-
+    
     public int getCapacite() {
         return capacite;
     }

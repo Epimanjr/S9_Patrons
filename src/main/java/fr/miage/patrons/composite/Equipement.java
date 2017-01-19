@@ -15,9 +15,14 @@ public abstract class Equipement {
     private String name;
 
     /**
-     * Prix de l'équipement
+     * Cout d'achat/production de l'équipement
      */
-    private int prix;
+    private int cout;
+    
+    /**
+     * Coefficient multiplicateur
+     */
+    private double coef;
 
     /**
      * Consommation de l'équipement
@@ -29,29 +34,15 @@ public abstract class Equipement {
      */
     private boolean fonctionne;
 
-    public Equipement(String name, int prix, int consommation, boolean fonctionne) {
+    public Equipement(String name, int cout, double coef, int consommation, boolean fonctionne) {
         this.name = name;
-        this.prix = prix;
+        this.cout = cout;
+        this.coef = coef;
         this.consommation = consommation;
         this.fonctionne = fonctionne;
     }
 
-    public int getPrixTotal() {
-        /*// Initialisation
-        int prixTotal = this.prix;
-
-        // Si la liste n'est pas vide
-        if (!this.listEquipements.isEmpty()) {
-            // On parcourt les équipements et on ajoute son prix
-            for (Equipement e : this.listEquipements) {
-                prixTotal += e.getPrixTotal();
-            }
-        }
-
-        return prixTotal;*/
-        
-        return Integer.MIN_VALUE;
-    }
+    public abstract double getPrixTotal();
 
     public String getName() {
         return name;
@@ -61,12 +52,12 @@ public abstract class Equipement {
         this.name = name;
     }
 
-    public int getPrix() {
-        return prix;
+    public int getCout() {
+        return cout;
     }
 
-    public void setPrix(int prix) {
-        this.prix = prix;
+    public void setCout(int cout) {
+        this.cout = cout;
     }
 
     public int getConsommation() {
@@ -83,6 +74,14 @@ public abstract class Equipement {
 
     public void setFonctionne(boolean fonctionne) {
         this.fonctionne = fonctionne;
+    }
+
+    public double getCoef() {
+        return coef;
+    }
+
+    public void setCoef(double coef) {
+        this.coef = coef;
     }
 
 }

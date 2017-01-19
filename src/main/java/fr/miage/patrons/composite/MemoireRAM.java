@@ -11,13 +11,9 @@ public class MemoireRAM extends EquipementSimple {
      * Capacité de la mémoire
      */
     private int capacite;
-    
-    public MemoireRAM(String name, int prix, int consommation, boolean fonctionne) {
-        super(name, prix, consommation, fonctionne);
-    }
 
-    public MemoireRAM(int capacite, String name, int prix, int consommation, boolean fonctionne) {
-        super(name, prix, consommation, fonctionne);
+    public MemoireRAM(int capacite, String name, int cout, double coef, int consommation, boolean fonctionne) {
+        super(name, cout, coef, consommation, fonctionne);
         this.capacite = capacite;
     }
     

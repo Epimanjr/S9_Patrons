@@ -7,8 +7,8 @@ package fr.miage.patrons.composite;
  */
 public class CarteMere extends EquipementSimple {
 
-    public CarteMere(String name, int prix, int consommation, boolean fonctionne) {
-        super(name, prix, consommation, fonctionne);
-    }    
+    public CarteMere(String name, int cout, double coef, int consommation, boolean fonctionne) {
+        super(name, cout, coef, consommation, fonctionne);
+    }
 
 }
