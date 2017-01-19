@@ -5,7 +5,7 @@ package fr.miage.patrons.composite;
  * @author Antoine NOSAL
  * @author Maxime BLAISE
  */
-public class MemoireRAM extends Equipement {
+public class MemoireRAM extends EquipementSimple {
 
     /**
      * Capacité de la mémoire

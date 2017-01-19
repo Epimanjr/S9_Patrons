@@ -24,7 +24,7 @@ public class Main {
         
         // Construction d'un ordinateur
         Ordinateur ordi = new Ordinateur("BlaiseNosal", 20, 10, true);
-        ordi.getListEquipements().addAll(Arrays.asList(batterie, carteMere, disqueDur, ram));
+        // TODO 
         
         // Calcul du prix total
         int prixTotal = ordi.getPrixTotal();

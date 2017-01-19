@@ -5,7 +5,7 @@ package fr.miage.patrons.composite;
  *
  * @author Maxime BLAISE
  */
-public class Batterie extends Equipement {
+public class Batterie extends EquipementSimple {
     
     /**
      * Capacité de la batterie (en cellules)

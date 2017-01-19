@@ -7,12 +7,7 @@ import java.util.List;
  *
  * @author Maxime BLAISE
  */
-public class Equipement {
-
-    /**
-     * Pour gérer la récursivité.
-     */
-    private final List<Equipement> listEquipements = new ArrayList<>();
+public abstract class Equipement {
 
     /**
      * Nom de l'équipement
@@ -42,7 +37,7 @@ public class Equipement {
     }
 
     public int getPrixTotal() {
-        // Initialisation
+        /*// Initialisation
         int prixTotal = this.prix;
 
         // Si la liste n'est pas vide
@@ -53,11 +48,9 @@ public class Equipement {
             }
         }
 
-        return prixTotal;
-    }
-
-    public List<Equipement> getListEquipements() {
-        return listEquipements;
+        return prixTotal;*/
+        
+        return Integer.MIN_VALUE;
     }
 
     public String getName() {
