@@ -7,16 +7,17 @@ import java.util.List;
 /**
  *
  * @author Maxime BLAISE
+ * @author Antoine NOSAL
  */
-public class EquipementComplexe extends Equipement {
+public class EquipementITComplexe extends EquipementIT {
     
-    private List<Equipement> listEquipements = new ArrayList<>();
+    private List<EquipementIT> listEquipements = new ArrayList<>();
 
-    public EquipementComplexe(String name, double coef, int consommation, boolean fonctionne) {
+    public EquipementITComplexe(String name, double coef, int consommation, boolean fonctionne) {
         super(name, -1, coef, consommation, fonctionne);
     }
 
-    public List<Equipement> getListEquipements() {
+    public List<EquipementIT> getListEquipements() {
         return listEquipements;
     }
     
@@ -27,18 +28,18 @@ public class EquipementComplexe extends Equipement {
         return prixTotal;
     }
     
-    public int getCoutTotal() {
-        int coutTotal = 0;
+    public double getCoutTotal() {
+        double coutTotal = 0.0;
         if (!this.listEquipements.isEmpty()) {
             // On parcourt les équipements et on ajoute son cout
-            for (Equipement e : this.listEquipements) {
+            for (EquipementIT e : this.listEquipements) {
                 coutTotal += e.getPrixTotal();
             }
         }
         return coutTotal;
     }
     
-    public int getCout() {
+    public double getCout() {
         return this.getCoutTotal();
     }
     

@@ -4,7 +4,7 @@ package fr.miage.patrons.composite;
  *
  * @author Antoine NOSAL
  */
-public class DisqueDur extends EquipementSimple {
+public class DisqueDur extends EquipementITSimple {
 
     /**
      * Capacité du disque dur
